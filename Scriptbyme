@@ -1,0 +1,20 @@
+local DrRayLibrary = loadstring(game:HttpGet("https://raw.githubusercontent.com/AZYsGithub/DrRay-UI-Library/main/DrRay.lua"))()
+local window = DrRayLibrary:Load("PRIVATE", "Default")
+local tab = DrRayLibrary.newTab("MAIN", "ImageIdHere")
+tab.newToggle("SUPERSPEED", "Warning:Dont be on if you Dont have Antikick", true, function(toggleState)
+    if toggleState then
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 50
+    else
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+    end
+end)
+tab.newToggle("SUPERJUMPER", "Warning:Dont be on if you Dont have Antikick", false, function(toggleState)
+    if toggleState then
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = 100
+    else
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
+    end
+end)
+tab.newButton("NOCLIP", "NOCLIP", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/QWsQXWqN"))()
+end)
